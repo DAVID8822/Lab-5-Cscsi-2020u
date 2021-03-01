@@ -34,7 +34,7 @@ public class StudentRecord {
         else if (this.finalmark <= 59 && this.finalmark >= 50){
             letterGrade = 'D';
         }
-        else{
+        else if (this.finalmark < 50){
             letterGrade = 'F';
         }
 
