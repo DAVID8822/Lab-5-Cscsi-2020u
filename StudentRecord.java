@@ -3,22 +3,22 @@ package csci2020u.lab05;
 public class StudentRecord {
 
     String SID;
-    float assignments;
-    float midterm;
-    float finalexam;
+    float assignmentGrade;
+    float midtermGrade;
+    float finalexamGrade;
     double finalmark;
     char letterGrade;
 
-    public StudentRecord(String studentNumber,float assignmentGrade, float midtermGrade, float examGrade){
+    public StudentRecord(String studentNumber,float assignmentGrade, float midtermGrade, float finalexamGrade){
         this.SID = studentNumber;
-        this.midterm = midtermGrade;
-        this.finalexam = examGrade;
-        this.assignments = assignmentGrade;
+        this.midtermGrade = midtermGrade;
+        this.finalexamGrade = finalexamGrade;
+        this.assignmentGrade = assignmentGrade;
 
 
-        this.finalmark += finalexam * 0.5;
-        this.finalmark += assignments*0.2;
-        this.finalmark += midterm * 0.3;
+        this.finalmark += finalexamGrade * 0.5;
+        this.finalmark += assignmentGrade*0.2;
+        this.finalmark += midtermGrade * 0.3;
 
 
 
@@ -46,13 +46,13 @@ public class StudentRecord {
 
     }
     public float getAssignments(){
-        return assignments;
+        return assignmentGrade;
     }
     public float getMidterm(){
-        return midterm;
+        return midtermGrade;
     }
     public float getFinalexam(){
-        return finalexam;
+        return finalexamGrade;
     }
     public double getFinalmark(){
         return finalmark;
